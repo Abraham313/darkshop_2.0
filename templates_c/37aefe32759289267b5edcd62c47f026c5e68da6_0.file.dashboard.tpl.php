@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2019-08-17 18:32:29
+/* Smarty version 3.1.32, created on 2019-08-17 23:18:40
   from 'D:\xampp\htdocs\templates\v1\Admin_main\dashboard.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5d582c1d0824c7_36337436',
+  'unifunc' => 'content_5d586f306a6c27_76801682',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37aefe32759289267b5edcd62c47f026c5e68da6' => 
     array (
       0 => 'D:\\xampp\\htdocs\\templates\\v1\\Admin_main\\dashboard.tpl',
-      1 => 1566059547,
+      1 => 1566076714,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5d582c1d0824c7_36337436 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d586f306a6c27_76801682 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>'foo'), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>'foo'), 0, false);
 ?>
@@ -102,6 +102,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                        <th>Access ID</th>
                        <th>Load Amount</th>
                        <th>User</th>
+                       <th>Suspend</th>
                    </tr>
                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['allOrders']->value, 'order');
@@ -116,6 +117,15 @@ foreach ($_from as $_smarty_tpl->tpl_vars['order']->value) {
 </td>
                        <td><?php echo $_smarty_tpl->tpl_vars['order']->value['username'];?>
 </td>
+                       <td>
+                           <?php if ($_smarty_tpl->tpl_vars['order']->value['status'] == "active") {?>
+                               <form method="post"><input type="submit" value="Suspend Order"> <input type="text" name="suspend" value="<?php echo $_smarty_tpl->tpl_vars['order']->value['id'];?>
+" hidden> </form>
+                           <?php } else { ?>
+                               <form method="post"><input type="submit" value="Allow Order"> <input type="text" name="suspend" value="<?php echo $_smarty_tpl->tpl_vars['order']->value['id'];?>
+" hidden> </form>
+                           <?php }?>
+                      </td>
                    </tr>
                <?php
 }

@@ -12,6 +12,11 @@ class BotShop{
     private $minOrderTarget;
     public function __construct()
     {
+        $userHandler = new User();
+        if(!$userHandler->isLoggedIn()){
+            Header("Location: /login");
+            die();
+        }
         $price = $GLOBALS["pdo"]->prepare("SELECT * FROM botshop_pricelist WHERE iso_short = ? ");
         $price->execute(array("mix"));
         $DefaultMixPrice = $price->fetch();
@@ -46,7 +51,11 @@ class BotShop{
     }
 
     public function bot_loads(){
-
+        $userHandler = new User();
+        if(!$userHandler->isLoggedIn()){
+            Header("Location: /login");
+            die();
+        }
         $botShopApi = new BotShopApi();
 
         $orders = $botShopApi->getOrderByUser($_SESSION["userid"]);
@@ -141,6 +150,14 @@ class BotShop{
     {
         $GLOBALS["template"][0] = "BotShop";
         $GLOBALS["template"][1] = "manage";
+
+
+        $bothandler = new BotShopApi();
+
+        $order = $bothandler->getOrderByAuthKey($userAuthkey);
+        if($order["status"] == "suspended"){
+            die("Your Order is Suspended");
+        }
         if(!empty($_FILES["uploaded_file"])){
             $allowed =  array('exe');
             $filename = $_FILES['uploaded_file']['name'];

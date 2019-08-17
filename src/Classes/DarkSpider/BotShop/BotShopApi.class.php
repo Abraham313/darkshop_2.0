@@ -6,7 +6,7 @@ class BotShopApi{
 
         public function getOrderByUser($id){
             $orders = [];
-            $sql = "SELECT * FROM botshop_orders WHERE user_id = ".$id;
+            $sql = "SELECT * FROM botshop_orders WHERE user_id = ".$id. " AND status != 'suspended'";
             foreach ($GLOBALS["pdo"]->query($sql)->fetchAll(PDO::FETCH_ASSOC) as $listItem) {
 
                 $orders[] = $listItem;
@@ -23,6 +23,17 @@ class BotShopApi{
                 $prices[] = $listItem;
             }
             return json_encode($prices);
+        }
+
+        public function getOrderByAuthKey($auth){
+            $orders = [];
+            $sql = "SELECT * FROM botshop_orders WHERE api_id = '".$auth."'";
+            foreach ($GLOBALS["pdo"]->query($sql)->fetchAll(PDO::FETCH_ASSOC) as $listItem) {
+                $orders = $listItem;
+            }
+
+
+            return $orders;
         }
 
 }

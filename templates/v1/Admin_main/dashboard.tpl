@@ -63,12 +63,20 @@
                        <th>Access ID</th>
                        <th>Load Amount</th>
                        <th>User</th>
+                       <th>Suspend</th>
                    </tr>
                {foreach from=$allOrders  item=order}
                    <tr>
                        <td> <a href="/bot_loads/statistics/{$order.api_id}">{$order.api_id}</td>
                        <td>{$order.load_amount}</td>
                        <td>{$order.username}</td>
+                       <td>
+                           {if $order.status == "active"}
+                               <form method="post"><input type="submit" value="Suspend Order"> <input type="text" name="suspend" value="{$order.id}" hidden> </form>
+                           {else}
+                               <form method="post"><input type="submit" value="Allow Order"> <input type="text" name="suspend" value="{$order.id}" hidden> </form>
+                           {/if}
+                      </td>
                    </tr>
                {/foreach}
                </table>

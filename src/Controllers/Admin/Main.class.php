@@ -16,6 +16,27 @@ public function __construct()
 
     //select count(create_date) as payments, create_date as date from payments_btc where create_date  between (CURRENT_TIMESTAMP() - INTERVAL 31 DAY) and (CURDATE() - INTERVAL 1 DAY) group by create_date
 
+        if(!empty($_POST["suspend"])){
+
+            $statement = $GLOBALS["pdo"]->prepare("SELECT * FROM `botshop_orders` WHERE id = ?");
+            $statement->execute(array($_POST["suspend"]));
+            $suspendInfo = $statement->fetch();
+            if($suspendInfo["status"] == "active"){
+                $statement = $GLOBALS["pdo"]->prepare("UPDATE botshop_orders SET status = ? WHERE id = ?");
+                $statement->execute(array("suspended",$_POST["suspend"]));
+            }else{
+                $statement = $GLOBALS["pdo"]->prepare("UPDATE botshop_orders SET status = ? WHERE id = ?");
+                $statement->execute(array("active",$_POST["suspend"]));
+            }
+
+        }
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $_SESSION['postdata'] = $_POST;
+            unset($_POST);
+            header("Location: ".$GLOBALS["link"] );
+        }
+
+
         $statement = $GLOBALS["pdo"]->prepare("select payments_btc.*, payments_btc.create_date as `date`, users.username, users.amount_in_usd  from payments_btc
                                                 LEFT JOIN users ON users.id = payments_btc.user_id where payments_btc.payed = 2 OR payments_btc.payed = 1");
         $statement->execute(array());
