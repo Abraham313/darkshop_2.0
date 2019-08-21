@@ -147,7 +147,7 @@
         priceList = jQuery.parseJSON(pricejson);
         $.each(priceList,function(index, value){
             if(value.iso_short != "mix"){
-                $("#multiselect").append("<option data-price='"+value.price_usd+"' value='"+value.iso_short+"'>"+value.iso_short+"</option>")
+                $("#multiselect").append("<option data-img='{$includeDir}assets/img/flags/"+value.iso_short+".png' data-price='"+value.price_usd+"' value='"+value.iso_short+"'>"+value.iso_short+"</option>")
             }
         });
         $( "#enableWordMix" ).click(function() {
@@ -156,8 +156,14 @@
         });
         $('#multiselect').multiselect({
             buttonWidth: '100%',
-            includeSelectAllOption : true,
-            nonSelectedText: 'Select an Option'
+            nonSelectedText: 'Select Countries!',
+            includeSelectAllOption: true,
+            enableCaseInsensitiveFiltering: true,
+            enableFiltering: true,
+            enableHTML: true,
+            optionLabel: function (element) {
+                return   ' <img height="15px" src="' + $(element).attr('data-img') + '">'+$(element).text();
+            }
         });
         $('#number').change(function(){
             calc();
@@ -194,7 +200,7 @@
                         if(v.iso_short == selected){
                             topay = topay + (difference * v.price_usd);
                             currentSelectedCountrys[v.iso_short] = difference * v.price_usd;
-                            $("#addPrices").append("<tr><td>"+v.iso_short+"</td><td>"+difference+"</td> <td> $ "+v.price_usd+" </td><td>$ "+difference * v.price_usd+" </td></tr>");
+                            $("#addPrices").append("<tr><td> <img height='15' src='{$includeDir}assets/img/flags/"+v.iso_short+".png'>  "+v.iso_short+"</td><td>"+difference+"</td> <td> $ "+v.price_usd+" </td><td>$ "+difference * v.price_usd+" </td></tr>");
                         }
                     });
                 });

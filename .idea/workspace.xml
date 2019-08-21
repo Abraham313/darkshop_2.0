@@ -9,12 +9,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/v1/Admin_main/dashboard.tpl">
+        <entry file="file://$PROJECT_DIR$/templates/v1/BotShop/bot_loads.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="76" column="125" selection-start-line="76" selection-start-column="118" selection-end-line="76" selection-end-column="125" />
+            <state relative-caret-position="489">
+              <caret line="202" column="76" selection-start-line="202" selection-start-column="76" selection-end-line="202" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/v1/BotShop/manage.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -22,35 +31,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/Admin/Main.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="129" column="34" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Classes/DarkSpider/BotShop/BotShopApi.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="636">
+              <caret line="87" column="81" selection-start-line="87" selection-start-column="58" selection-end-line="87" selection-end-column="81" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/Public/BotShop.class.php">
+        <entry file="file://$PROJECT_DIR$/src/Classes/DarkSpider/Support.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="158" column="40" selection-start-line="158" selection-start-column="40" selection-end-line="158" selection-end-column="40" />
+            <state relative-caret-position="459">
+              <caret line="27" column="153" selection-start-line="27" selection-start-column="153" selection-end-line="27" selection-end-column="153" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+        <entry file="file://$PROJECT_DIR$/templates/v1/Admin_main/dashboard.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+            <state relative-caret-position="551">
+              <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/v1/assets/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="166" column="17" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -59,7 +68,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sendPost</find>
       <find>price</find>
       <find>Please fill out the Input</find>
       <find>btc</find>
@@ -89,6 +97,7 @@
       <find>media msg</find>
       <find>hacking</find>
       <find>Account Balance</find>
+      <find>multiselect</find>
     </findStrings>
     <replaceStrings>
       <replace>auth_token</replace>
@@ -130,32 +139,32 @@
         <option value="$PROJECT_DIR$/templates/v1/assets/vendor/toastr.js" />
         <option value="$PROJECT_DIR$/templates/v1/assets/vendor/jquery-easing/toastr.css" />
         <option value="$PROJECT_DIR$/templates/v1/header.tpl" />
-        <option value="$PROJECT_DIR$/templates/v1/BotShop/manage.tpl" />
         <option value="$PROJECT_DIR$/templates/v1/footer.tpl" />
         <option value="$PROJECT_DIR$/src/Classes/DarkSpider/darkrat_api.class.php" />
         <option value="$PROJECT_DIR$/templates/v1/Main/login.tpl" />
         <option value="$PROJECT_DIR$/templates/v1/Main/register.tpl" />
-        <option value="$PROJECT_DIR$/src/Classes/DarkSpider/BitcoinDriver/BitcoinDriver.php" />
         <option value="$PROJECT_DIR$/templates/v1/Admin_main/users.tpl" />
         <option value="$PROJECT_DIR$/src/Classes/DarkSpider/user.class.php" />
         <option value="$PROJECT_DIR$/templates/v1/Admin_main/users_edit.tpl" />
         <option value="$PROJECT_DIR$/templates/v1/nav.tpl" />
         <option value="$PROJECT_DIR$/templates/v1/Admin_main/support.tpl" />
-        <option value="$PROJECT_DIR$/src/Classes/DarkSpider/Support.class.php" />
         <option value="$PROJECT_DIR$/templates/v1/Main/support_view.tpl" />
         <option value="$PROJECT_DIR$/templates/v1/Main/settings.tpl" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/templates/v1/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/templates/v1/Admin_main/fileserver.tpl" />
-        <option value="$PROJECT_DIR$/templates/v1/BotShop/bot_loads.tpl" />
         <option value="$PROJECT_DIR$/templates/v1/Admin_main/botshop.tpl" />
         <option value="$PROJECT_DIR$/src/Controllers/Public/Main.class.php" />
         <option value="$PROJECT_DIR$/templates/v1/Main/dashboard.tpl" />
         <option value="$PROJECT_DIR$/src/Cron/payments.cron.php" />
-        <option value="$PROJECT_DIR$/templates/v1/Admin_main/dashboard.tpl" />
-        <option value="$PROJECT_DIR$/src/Controllers/Admin/Main.class.php" />
         <option value="$PROJECT_DIR$/src/Classes/DarkSpider/BotShop/BotShopApi.class.php" />
         <option value="$PROJECT_DIR$/src/Controllers/Public/BotShop.class.php" />
+        <option value="$PROJECT_DIR$/src/Classes/DarkSpider/BitcoinDriver/BitcoinDriver.php" />
+        <option value="$PROJECT_DIR$/templates/v1/assets/css/custom.css" />
+        <option value="$PROJECT_DIR$/templates/v1/BotShop/bot_loads.tpl" />
+        <option value="$PROJECT_DIR$/templates/v1/BotShop/manage.tpl" />
+        <option value="$PROJECT_DIR$/templates/v1/Admin_main/dashboard.tpl" />
+        <option value="$PROJECT_DIR$/src/Controllers/Admin/Main.class.php" />
+        <option value="$PROJECT_DIR$/src/Classes/DarkSpider/Support.class.php" />
       </list>
     </option>
   </component>
@@ -182,6 +191,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,22 +221,6 @@
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Classes" type="462c0819:PsiDirectoryNode" />
-              <item name="DarkSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="BitcoinDriver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Classes" type="462c0819:PsiDirectoryNode" />
-              <item name="DarkSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="BotShop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -235,13 +229,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
               <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
@@ -265,7 +252,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,19 +261,19 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\templates\v1\assets\vendor" />
-      <recent name="D:\xampp\htdocs\templates\v1\assets\img" />
-      <recent name="D:\xampp\htdocs\src\Classes\DarkSpider\BitcoinDriver" />
-      <recent name="D:\xampp\htdocs\templates\exsile\assets\img" />
-      <recent name="D:\xampp\htdocs\templates\exsile\assets\fonts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\templates\v1\assets\vendor" />
       <recent name="D:\xampp\htdocs\templates\v1\assets\fonts" />
       <recent name="D:\xampp\htdocs\templates\rbtmarket\assets\img" />
       <recent name="D:\xampp\htdocs\templates\v1\assets\js" />
       <recent name="D:\xampp\htdocs\templates\v1\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\templates\v1\assets\img\flags" />
+      <recent name="D:\xampp\htdocs\templates\v1\assets\vendor" />
+      <recent name="D:\xampp\htdocs\templates\v1\assets\img" />
+      <recent name="D:\xampp\htdocs\src\Classes\DarkSpider\BitcoinDriver" />
+      <recent name="D:\xampp\htdocs\templates\exsile\assets\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -342,7 +328,9 @@
       <workItem from="1565826508753" duration="2564000" />
       <workItem from="1565897486227" duration="3593000" />
       <workItem from="1565990437487" duration="10098000" />
-      <workItem from="1566076412157" duration="1831000" />
+      <workItem from="1566076412157" duration="2497000" />
+      <workItem from="1566241752170" duration="715000" />
+      <workItem from="1566408698073" duration="1716000" />
     </task>
     <task id="LOCAL-00001" summary="Added Manager Template">
       <created>1556318708005</created>
@@ -376,13 +364,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167914000" />
+    <option name="totallyTimeSpent" value="171011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14605543" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -557,13 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/v1/BotShop/manage.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="39" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/v1/Main/login.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -613,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/DarkSpider/Support.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/v1/Main/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -648,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/v1/assets/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/v1/Admin_main/fileserver.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -676,27 +643,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/DarkSpider/BitcoinDriver/BitcoinDriver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="31" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="31" />
-          <folding>
-            <element signature="e#6#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cron/payments.cron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/v1/BotShop/bot_loads.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -714,38 +664,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/v1/Admin_main/dashboard.tpl">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/Public/BotShop.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="76" column="125" selection-start-line="76" selection-start-column="118" selection-end-line="76" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/Admin/Main.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="129" column="34" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="34" />
+        <state relative-caret-position="2686">
+          <caret line="158" column="40" selection-start-line="158" selection-start-column="40" selection-end-line="158" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="867">
           <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/DarkSpider/BotShop/BotShopApi.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="272">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/Public/BotShop.class.php">
+    <entry file="file://$PROJECT_DIR$/src/Classes/DarkSpider/BitcoinDriver/BitcoinDriver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="158" column="40" selection-start-line="158" selection-start-column="40" selection-end-line="158" selection-end-column="40" />
+        <state relative-caret-position="177">
+          <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/v1/assets/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="166" column="17" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/v1/BotShop/bot_loads.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="202" column="76" selection-start-line="202" selection-start-column="76" selection-end-line="202" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/v1/BotShop/manage.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/v1/Admin_main/dashboard.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/Admin/Main.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="87" column="81" selection-start-line="87" selection-start-column="58" selection-end-line="87" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classes/DarkSpider/Support.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="153" selection-start-line="27" selection-start-column="153" selection-end-line="27" selection-end-column="153" />
         </state>
       </provider>
     </entry>

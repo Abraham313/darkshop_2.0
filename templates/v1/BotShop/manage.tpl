@@ -30,6 +30,7 @@
                         <button style="height: 100px; width: 100%" type="submit" class="btn btn-dark">
                             <h4 class="side">Your Order is Running<br>
                                 {$order.order.order.command}</h4>
+                            {$order.order|@count - 1}   /  {$order.order.order.botamount}
                             <div class="play-button-outer">
                                 <div class="play-pause"></div>
                             </div>
@@ -38,6 +39,7 @@
                         <button style="height: 100px; width: 100%" type="submit" class="btn btn-dark">
                             <h4 class="side">Your Order is Paused<br>
                                 {$order.order.order.command}</h4>
+                            {$order.order|@count - 1}   /  {$order.order.order.botamount}
                             <div class="play-button-outer">
                                 <div class="play-button"></div>
                             </div>

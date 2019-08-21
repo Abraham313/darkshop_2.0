@@ -38,12 +38,12 @@ public function __construct()
 
 
         $statement = $GLOBALS["pdo"]->prepare("select payments_btc.*, payments_btc.create_date as `date`, users.username, users.amount_in_usd  from payments_btc
-                                                LEFT JOIN users ON users.id = payments_btc.user_id where payments_btc.payed = 2 OR payments_btc.payed = 1");
+                                                LEFT JOIN users ON users.id = payments_btc.user_id where payments_btc.payed = 2 OR payments_btc.payed = 1 ORDER BY payments_btc.create_date DESC LIMIT 500");
         $statement->execute(array());
         $payments_today = $statement->fetchAll();
 
 
-        $statement = $GLOBALS["pdo"]->prepare("SELECT botshop_orders.*, users.username from botshop_orders LEFT JOIN users On users.id = botshop_orders.user_id");
+        $statement = $GLOBALS["pdo"]->prepare("SELECT botshop_orders.*, users.username from botshop_orders LEFT JOIN users On users.id = botshop_orders.user_id ORDER BY botshop_orders.created_at DESC LIMIT 500");
         $statement->execute(array());
         $allOrders = $statement->fetchAll();
 
@@ -85,7 +85,7 @@ public function __construct()
         $support = new Support();
 
 
-        $GLOBALS["tpl"]->assign("allTickets",   $support->getAllTickets());
+        $GLOBALS["tpl"]->assign("allTickets",   $support->getAllTicketsForSupport());
     }
 
     public function botshop(){

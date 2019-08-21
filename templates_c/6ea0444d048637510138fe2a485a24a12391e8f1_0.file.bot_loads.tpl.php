@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2019-08-17 18:01:42
+/* Smarty version 3.1.32, created on 2019-08-21 19:39:29
   from 'D:\xampp\htdocs\templates\v1\BotShop\bot_loads.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5d5824e601ce65_15965039',
+  'unifunc' => 'content_5d5d81d12c9155_12169470',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6ea0444d048637510138fe2a485a24a12391e8f1' => 
     array (
       0 => 'D:\\xampp\\htdocs\\templates\\v1\\BotShop\\bot_loads.tpl',
-      1 => 1566057701,
+      1 => 1566409167,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5d5824e601ce65_15965039 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d5d81d12c9155_12169470 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -188,7 +188,8 @@ echo $_smarty_tpl->tpl_vars['currentAlerts']->value;?>
         priceList = jQuery.parseJSON(pricejson);
         $.each(priceList,function(index, value){
             if(value.iso_short != "mix"){
-                $("#multiselect").append("<option data-price='"+value.price_usd+"' value='"+value.iso_short+"'>"+value.iso_short+"</option>")
+                $("#multiselect").append("<option data-img='<?php echo $_smarty_tpl->tpl_vars['includeDir']->value;?>
+assets/img/flags/"+value.iso_short+".png' data-price='"+value.price_usd+"' value='"+value.iso_short+"'>"+value.iso_short+"</option>")
             }
         });
         $( "#enableWordMix" ).click(function() {
@@ -197,8 +198,14 @@ echo $_smarty_tpl->tpl_vars['currentAlerts']->value;?>
         });
         $('#multiselect').multiselect({
             buttonWidth: '100%',
-            includeSelectAllOption : true,
-            nonSelectedText: 'Select an Option'
+            nonSelectedText: 'Select Countries!',
+            includeSelectAllOption: true,
+            enableCaseInsensitiveFiltering: true,
+            enableFiltering: true,
+            enableHTML: true,
+            optionLabel: function (element) {
+                return   ' <img height="15px" src="' + $(element).attr('data-img') + '">'+$(element).text();
+            }
         });
         $('#number').change(function(){
             calc();
@@ -235,7 +242,8 @@ echo $_smarty_tpl->tpl_vars['currentAlerts']->value;?>
                         if(v.iso_short == selected){
                             topay = topay + (difference * v.price_usd);
                             currentSelectedCountrys[v.iso_short] = difference * v.price_usd;
-                            $("#addPrices").append("<tr><td>"+v.iso_short+"</td><td>"+difference+"</td> <td> $ "+v.price_usd+" </td><td>$ "+difference * v.price_usd+" </td></tr>");
+                            $("#addPrices").append("<tr><td> <img height='15' src='<?php echo $_smarty_tpl->tpl_vars['includeDir']->value;?>
+assets/img/flags/"+v.iso_short+".png'>  "+v.iso_short+"</td><td>"+difference+"</td> <td> $ "+v.price_usd+" </td><td>$ "+difference * v.price_usd+" </td></tr>");
                         }
                     });
                 });

@@ -160,3 +160,9 @@ form{
     clear: both;
     display: table;
 }
+.multiselect-container{
+    background-color: #343a40 !important;
+}
+.multiselect-container a {
+    color: white;
+}

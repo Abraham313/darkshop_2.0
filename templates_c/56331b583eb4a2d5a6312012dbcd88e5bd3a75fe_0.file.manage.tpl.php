@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2019-08-11 23:22:44
+/* Smarty version 3.1.32, created on 2019-08-21 19:45:30
   from 'D:\xampp\htdocs\templates\v1\BotShop\manage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5d508724e3a091_95226849',
+  'unifunc' => 'content_5d5d833a650b52_91587241',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '56331b583eb4a2d5a6312012dbcd88e5bd3a75fe' => 
     array (
       0 => 'D:\\xampp\\htdocs\\templates\\v1\\BotShop\\manage.tpl',
-      1 => 1565557110,
+      1 => 1566409529,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5d508724e3a091_95226849 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d5d833a650b52_91587241 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>'foo'), 0, false);
 ?>
@@ -59,6 +59,9 @@ $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smart
                             <h4 class="side">Your Order is Running<br>
                                 <?php echo $_smarty_tpl->tpl_vars['order']->value['order']['order']['command'];?>
 </h4>
+                            <?php echo count($_smarty_tpl->tpl_vars['order']->value['order'])-1;?>
+   /  <?php echo $_smarty_tpl->tpl_vars['order']->value['order']['order']['botamount'];?>
+
                             <div class="play-button-outer">
                                 <div class="play-pause"></div>
                             </div>
@@ -68,6 +71,9 @@ $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smart
                             <h4 class="side">Your Order is Paused<br>
                                 <?php echo $_smarty_tpl->tpl_vars['order']->value['order']['order']['command'];?>
 </h4>
+                            <?php echo count($_smarty_tpl->tpl_vars['order']->value['order'])-1;?>
+   /  <?php echo $_smarty_tpl->tpl_vars['order']->value['order']['order']['botamount'];?>
+
                             <div class="play-button-outer">
                                 <div class="play-button"></div>
                             </div>

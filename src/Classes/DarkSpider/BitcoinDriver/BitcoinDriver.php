@@ -9,7 +9,7 @@ use CloudflareBypass\RequestMethod\CFCurl;
 class BTC_SpiderPayment{
 
     public $testnet = false;
-    public $blockchainAPI = "https://chain.so/api/v2/get_address_balance/BTC/";
+    public $blockchainAPI = "https://blockchain.info/q/addressbalance/";
 
     public function generateRandomString($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -39,30 +39,44 @@ class BTC_SpiderPayment{
     }
 
 
+    function satoshi2btc($satoshi){
+        return number_format(($satoshi)*(pow(10, -8)), 8, '.', '');
+    }
+
+
     public function checkAmount($address){
 
         if($this->testnet){
-            $this->blockchainAPI = "https://chain.so/api/v2/get_address_balance/BTCTEST/";
+            $this->blockchainAPI = "https://testnet.blockchain.info/q/addressbalance/";
         }
+        //$this->blockchainAPI = "https://blockchain.info/q/addressbalance/";
         $curl_cf_wrapper = new CFCurl(array(
-            'max_retries'   => 5,                   // How many times to try and get clearance?
+            'max_retries'   => 1,                   // How many times to try and get clearance?
             'cache'         => false,               // Enable caching?
             'cache_path'    => __DIR__ . '/cache',  // Where to cache cookies? (Default: system tmp directory)
-            'verbose'       => true                 // Enable verbose? (Good for debugging issues - doesn't effect cURL handle)
+            'verbose'       => false                 // Enable verbose? (Good for debugging issues - doesn't effect cURL handle)
         ));
 
         // Get Example: 1
         $ch = curl_init($this->blockchainAPI.$address."/");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36');
-        $json = $curl_cf_wrapper->exec($ch); // Done! NOTE: HEAD requests not supported!
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3239.132 Safari/537.36');
+        //$json = $curl_cf_wrapper->exec($ch); // Done! NOTE: HEAD requests not supported!
+        $json = curl_exec($ch);
         curl_close($ch);
 
-        if($json != false){
-            $checked = json_decode($json,true);
-            if(!empty($checked["data"]["confirmed_balance"])){
-                return array("confirmed_balance" => $checked["data"]["confirmed_balance"], "unconfirmed_balance" => $checked["data"]["unconfirmed_balance"]);
+        if($json != false && $json != "null"){
+            // $checked = json_decode($json,true);
+            /*
+             if(!empty($checked["data"]["confirmed_balance"])){
+                 return array("confirmed_balance" => $checked["data"]["confirmed_balance"], "unconfirmed_balance" => $checked["data"]["unconfirmed_balance"]);
+             }
+            */
+            $checked = $this->satoshi2btc($json);
+            var_dump($checked);
+            if(!empty($checked)){
+                return array("confirmed_balance" => $checked, "unconfirmed_balance" => $checked);
             }
 
         }

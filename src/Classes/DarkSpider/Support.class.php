@@ -23,6 +23,17 @@ class Support{
         return $return;
     }
 
+
+    public function getAllTicketsForSupport(){
+        $statement = $GLOBALS["pdo"]->prepare("SELECT tickets.*, users.username FROM tickets LEFT JOIN users ON users.id = tickets.user_id WHERE tickets.status != 'closed'");
+        $statement->execute(array());
+        $return = array();
+        while($order = $statement->fetch()) {
+            $return[] = $order;
+        }
+        return $return;
+    }
+
     public function getTicketByID($id){
         $statement = $GLOBALS["pdo"]->prepare("SELECT * FROM tickets WHERE id = :id");
         $statement->execute(array('id' => $id));
